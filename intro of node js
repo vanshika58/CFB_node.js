@@ -1,0 +1,66 @@
+const http = require('http');  //const http means we want to use http module
+
+const hostname = '127.0.0.1'; //server at which our code is running
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html'); //this shows that content type is text or html
+  res.end(`<!DOCTYPE html>    
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>color in css</title>
+      <style>
+          
+  h1{
+       color:rgba(47, 69, 165, 0.897)
+    }
+    p{
+        color: brown;
+    }
+     body{
+         background-color: bisque;
+     }
+      .background{
+         background-image: url(/enviroment\ day.jpg);
+         height: 100px;  px;
+         background-attachment: scroll;
+         background-position: center;
+     }
+      </style>
+  </head>
+  <body>
+      <div class="background">
+          <h1>for img in background</h1>
+      </div>   <p class="background">Lorem ipsum dolor sit amet,
+           consectetur adipisicing elit.
+           Ab odit velit libero perspiciatis ex quo cumque
+            inventore fuga. Debitis consequatur exercitationem
+            alias quibusdam totam, repudiandae quia
+             reiciendis esse. Excepturi, laboriosam. 100 consectetur adipisicing elit.
+             Ab odit velit libero perspiciatis ex quo cumque
+              inventore fuga. Debitis consequatur exercitationem
+              alias quibusdam totam, repudiandae quia
+               reiciendis esse. Excepturi, laboriosam. 10 consectetur adipisicing elit.
+               Ab odit velit libero perspiciatis ex quo cumque
+                inventore fuga. Debitis consequatur exercitationem
+                alias quibusdam totam, repudiandae quia
+                 reiciendis esse. Excepturi, laboriosam. 10
+          </p> consectetur adipisicing elit.
+          Ab odit velit libero perspiciatis ex quo cumque
+           inventore fuga. Debitis consequatur exercitationem
+           alias quibusdam totam, repudiandae quia
+            reiciendis esse. Excepturi, laboriosam. 10
+      <h1>this is a heading </h1>
+      <p>this is a paragraph</p>
+   
+  </body>
+  </html>`); //content inside it got printed/executed or run
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`); //this is printed ("server running at") as it is ,and hostname and port are imported
+}); 
