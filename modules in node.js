@@ -17,7 +17,7 @@ fs.readFile("file.txt","utf-8",(a,b)=> {
 });
 console.log("this is aq message")
 
-//SERVING A HTML FILLE EITH HELP OF  BACKEND
+//SERVING A HTML FILLE wITH HELP OF  BACKEND
 const http = require('http')
 const fs = require('fs')
 const fileContent = fs.readFileSync('celebro login.html')
