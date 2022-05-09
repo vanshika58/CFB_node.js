@@ -1,0 +1,50 @@
+{
+  "name": "nd05",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "nd05",
+      "version": "1.0.0",
+      "license": "ISC",
+      "dependencies": {
+        "slugify": "^1.6.5"
+      }
+    },
+    "node_modules/slugify": {
+      "version": "1.6.5",
+      "resolved": "https://registry.npmjs.org/slugify/-/slugify-1.6.5.tgz",
+      "integrity": "sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ==",
+      "engines": {
+        "node": ">=8.0.0"
+      }
+    }
+  },
+  "dependencies": {
+    "slugify": {
+      "version": "1.6.5",
+      "resolved": "https://registry.npmjs.org/slugify/-/slugify-1.6.5.tgz",
+      "integrity": "sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ=="
+    }
+  }
+}
+// file created from above file 
+{
+  "name": "nd05",
+  "version": "1.0.0",
+  "description": "one of the best pacakage",
+  "main": "custom server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesom"
+  ],
+  "author": "cfb",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.6.5 "
+  }  
+}
+
