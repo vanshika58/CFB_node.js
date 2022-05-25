@@ -1,0 +1,17 @@
+//editing app.js file 
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <> 
+       <nav>
+         <li>Home</li>
+         <li>about </li>
+         <li>contact</li>
+       </nav>
+       <div className='container'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ducimus qui inventore eius beatae possimus repellendus quia cupiditate delectus nam sint itaque voluptatem maxime, officia hic? Eos consequuntur illo tenetur?
+        </div>
+    </>
+  );
+}
