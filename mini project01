@@ -1,0 +1,143 @@
+                              //code of App.js fille
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './Components/Navbar';
+import TextForm from './Components/TextForm';
+function App() {
+  return (
+  <>
+   <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <a className="navbar-brand" href="#">/Textyoutil</a>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">contact</a>
+      </li>
+    </ul>
+    <form className="form-inline my-2 my-lg-0">
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div>
+    <form>
+    <div className="form-group">
+      <label HTMLfor="exampleInputEmail1">Email address</label>
+      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+      <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div className="form-group">
+      <label HTMLfor="exampleInputPassword1">Password</label>
+      <input type="password" className="form-control" id="exampleInputPassword1"/>
+    </div>
+     <div>
+       <label HTMLfor="text">comments</label>
+       <input type="text" className='form-control' aria-rowcount={20}/>
+     </div>
+    <div className="form-group form-check">
+      <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+      <label className="form-check-label" HTMLfor="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" className="btn btn-primary">Submit</button>
+  </form>
+  
+</div>
+  </>
+  );
+}
+export default App;
+
+
+                                                      //code of Navabar.js
+import React from 'react'
+import PropTypes from 'prop-types'
+export default function Navbar() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <a className="navbar-brand" href="#">/Textyoutil</a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+  
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item active">
+          <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">contact</a>
+        </li>
+      </ul>
+      <form className="form-inline my-2 my-lg-0">
+        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  )
+}
+Navbar.PropTypes = { 
+  title :PropTypes.string ,
+  aboutText:PropTypes.string 
+}
+
+Greeting.defaultProps = {
+  title: 'Set title here',
+  aboutText:'about text here'
+};
+
+                                             //code of textform . js file
+//import React from 'react'
+import React,{useState} from 'react'
+
+export default function TextForm(props) {
+  const HandleClick = () =>{
+    console.log("Upper case was clicked");
+    let newText = text.toUpperCase();
+    setText(newText)
+  }
+  const [text, setText] = useState('enter text here');
+  //text= 'new text' //incorect way to change the text
+  //setTextconst ("new text") //correct way to change the text
+  return (
+    <>
+     <div>
+        <h1>{props.heading}</h1>
+        <div className='mb=3'>
+          <textarea name="from-group"  cols="30" rows="10" value={text} onChange={HandleClick} id="mybox"></textarea> </div>
+          <button className='btn btn-primary' onClick={HandleClick}>convert to UpperCase</button>
+     </div>
+    <form>
+    <div className="form-group">
+      <label HTMLfor="exampleInputEmail1">Email address</label>
+      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+      <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div className="form-group">
+      <label HTMLfor="exampleInputPassword1">Password</label>
+      <input type="password" className="form-control" id="exampleInputPassword1"/>
+    </div>
+    <div>
+       <h1>{props.heading}- {text}</h1>
+       <label HTMLfor="text">comments</label>
+       <input type="text" value={text} className='form-control' aria-rowcount={20}/>
+     </div>
+    <div className="form-group form-check">
+      <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+      <label className="form-check-label" HTMLfor="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" className="btn btn-primary" onClick={HandleClick}>Submit</button>
+  </form>
+</>
+  )
+}
+
